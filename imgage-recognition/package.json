@@ -1,0 +1,24 @@
+{
+  "name": "lsdev-image-recognition",
+  "version": "1.0.0",
+  "description": "Node webapp for image recognition with tensorflow.js on google app engine",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/lndrschlz/special-octo-bassoon.git"
+  },
+  "author": "Leander Schulz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lndrschlz/special-octo-bassoon/issues"
+  },
+  "homepage": "https://github.com/lndrschlz/special-octo-bassoon#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "pug": "^2.0.4",
+    "typescript": "^3.6.3"
+  }
+}
