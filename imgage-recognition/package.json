@@ -4,6 +4,8 @@
   "description": "Node webapp for image recognition with tensorflow.js on google app engine",
   "main": "index.js",
   "scripts": {
+    "build": "tsc -p .",
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,6 +19,7 @@
   },
   "homepage": "https://github.com/lndrschlz/special-octo-bassoon#readme",
   "dependencies": {
+    "@types/node": "^12.7.5",
     "express": "^4.17.1",
     "pug": "^2.0.4",
     "typescript": "^3.6.3"
