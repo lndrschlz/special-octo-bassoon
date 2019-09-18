@@ -62,3 +62,4 @@ typings/
 
 # custom
 *.js
+.app.yaml
