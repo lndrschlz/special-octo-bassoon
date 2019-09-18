@@ -6,3 +6,5 @@ handlers:
       
   - url: /.*
     script: auto
+
+env_variables:

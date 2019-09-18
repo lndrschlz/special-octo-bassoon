@@ -2,6 +2,7 @@
 
 const express = require('express');
 const app = express();
+const deployment_timestamp = process.env.DEPLOYMENT;
 
 var path = require("path");
 var favicon = require("serve-favicon");
@@ -20,7 +21,9 @@ app.use(function(req, res, next) {
 
 app.get('/', (req, res) => {
     res.status(200)
-    res.render('index') 
+    res.render('index', {
+  		deployment: deployment_timestamp
+	}) 
 });
 
 app.get('/arch', (req, res) => {
