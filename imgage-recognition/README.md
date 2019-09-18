@@ -13,5 +13,7 @@ npm install && npm run build && npm start
 Currently deployed on [Google App Engine](https://lsd-imgpick.appspot.com/), deploy yourself by typing:
 
 ```
-gcloud app deploy
+npm run deploy
 ```
+
+Note: do not use `gcloud app deploy`. See package.json for more information.
