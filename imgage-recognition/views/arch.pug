@@ -50,19 +50,33 @@ html(lang='en')
     .container-narrow
       .masthead
         ul.nav.nav-pills.pull-right
-          li.active
-            a(href='/') Home
           li
+            a(href='/') Home
+          li.active
             a(href='/arch') Architecture
           li
             a(href='/contact') Contact
         h3.muted Image Recognition Demo
       hr
-      .jumbotron
-        h1 Upload an image now!
-        p.lead
-          | Get a neural network based prediction of the objects visible in your picture or photo by simply uploading it to our Node.js server on Google App Engine
-        a.btn.btn-large.btn-success(href='#') Upload
+      .row-fluid.marketing
+        .span6
+          h4 Node.js
+          p
+            | Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.
+          h4 Express 
+          p
+            | Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.
+          h4 PUG
+          p Maecenas sed diam eget risus varius blandit sit amet non magna.
+        .span6
+          h4 TypScript
+          p
+            | Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.
+          h4 Google App Engine
+          p
+            | Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.
+          //h4 Subheading
+          //p Maecenas sed diam eget risus varius blandit sit amet non magna.
       hr
       .footer
         p © lndrschlz 2019

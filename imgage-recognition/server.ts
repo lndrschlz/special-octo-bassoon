@@ -3,13 +3,34 @@
 const express = require('express');
 const app = express();
 
-app.set('view engine', 'pug');
+var path = require("path");
+var favicon = require("serve-favicon");
+var morgan = require("morgan");
 
-app.use(express.static("./static"));
+
+app.set('view engine', 'pug');
+app.use(express.static("./public"));
+app.use(favicon(path.join(__dirname, "public", "ico", "favicon.ico")));
+app.use(morgan("combined"));
+
+app.use(function(req, res, next) {
+  app.locals.pretty = true;
+  next();
+});
 
 app.get('/', (req, res) => {
     res.status(200)
     res.render('index') 
+});
+
+app.get('/arch', (req, res) => {
+    res.status(200)
+    res.render('arch') 
+});
+
+app.get('/contact', (req, res) => {
+    res.status(200)
+    res.render('contact') 
 });
 
 const PORT = process.env.PORT || 8080;
