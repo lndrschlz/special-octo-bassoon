@@ -47,6 +47,8 @@ html(lang='en')
     link(rel='apple-touch-icon-precomposed', href='/ico/apple-touch-icon-57-precomposed.png')
     link(rel='shortcut icon', href='/ico/favicon.png')
     include ./scripts
+    script(type="text/javascript")
+      include ../public/ts/index.js 
   body
     .container-narrow
       .masthead
@@ -63,7 +65,11 @@ html(lang='en')
         h1 Upload an image now!
         p.lead
           | Get a neural network based prediction of the objects visible in your picture or photo by simply uploading it to our Node.js server on Google App Engine
-        a.btn.btn-large.btn-success(href='#') Upload
+        form(id="uploadForm",enctype="multipart/form-data",action="api/Upload/",method="post")
+          input.btn.btn-large.btn-light(type="file",name="imgUploader",id="imgUploader",accept="png")
+          //input(type="submit",name="submit",id="btnSubmit",value="Upload")
+          a.btn.btn-large.btn-success(href='javascript:uploadImage();') Upload
+          span(id="status")
       hr
       .footer
         p © lndrschlz 2019 (last deployment: #{deployment})
